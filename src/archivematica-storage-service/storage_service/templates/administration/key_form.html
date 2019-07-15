@@ -1,0 +1,18 @@
+{% extends "administration/base.html" %}
+
+{% block page_title %}{{action}}{% endblock %}
+
+{% block content %}
+<div class='key'>
+  <p>{{ explanation | safe }}</p>
+  {% if action_ == "Create Key" %}
+    <form action="{% url 'key_create' %}" method="post" onsubmit="key.disabled = true; return true;">
+  {% else %}
+    <form action="{% url 'key_import' %}" method="post" onsubmit="key.disabled = true; return true;">
+  {% endif %}
+      {% csrf_token %}
+      {{ key_form.as_p }}
+      <input type="submit" name='key' value="{{action}}" class='btn btn-primary' />
+    </form>
+</div>
+{% endblock %}

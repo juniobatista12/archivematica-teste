@@ -1,0 +1,7 @@
+amclient
+behave>=1.0
+lxml
+metsrw
+pexpect
+requests>=2.18.0
+selenium==3.14.0

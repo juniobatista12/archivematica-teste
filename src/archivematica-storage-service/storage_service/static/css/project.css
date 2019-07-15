@@ -1,0 +1,91 @@
+body {
+  font-size:100%;
+}
+
+h1 {
+  font-size:2em;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-top: 1em;
+}
+
+p {
+  font-size:0.875em;
+}
+
+.row {
+  display: table-row;
+  margin-left: 0;
+}
+
+.sidebar ul,
+.sidebar li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 4px 6px;
+}
+
+div.sidebar {
+  width: 15%;
+  min-width: 120px;
+}
+
+form ul {
+  margin-left: 0px;
+}
+
+form li {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.btn {
+  margin: .15em;
+}
+
+table.attr-val-table td {
+  padding: 0.5em 1em;
+  font-weight: bold;
+}
+
+label.required-field:after {
+  content: '*';
+}
+
+.errorlist {
+  color: red;
+}
+
+/*
+Mimic regular Bootstrap 2.x links. This is used inside
+inline forms pretending to be just regular links!
+*/
+button.link {
+  background: none !important;
+  color: #08c;
+  border: none;
+  padding: 0 !important;
+  font: inherit;
+  border: 0;
+  cursor: pointer;
+}
+
+button.link:hover,
+button.link:active {
+  color: #005580;
+  text-decoration: underline;
+}
+
+.callback > form input[name^=header_] {
+  margin: 0 10px 0 0;
+}
+
+.callback-extended-description {
+  margin-bottom: 20px;
+}

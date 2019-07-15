@@ -1,0 +1,111 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-04 09:24-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: static/js/directory_picker.js:44
+msgid "Select"
+msgstr ""
+
+#: static/js/directory_picker.js:45
+msgid "Select directory"
+msgstr ""
+
+#: static/js/directory_picker.js:46
+msgid "Add"
+msgstr ""
+
+#: static/js/directory_picker.js:68
+msgid "De-select directory"
+msgstr ""
+
+#: static/js/directory_picker.js:69
+msgid "Are you sure you want to de-select this?"
+msgstr ""
+
+#: static/js/directory_picker.js:124
+msgid "OK"
+msgstr ""
+
+#: static/js/directory_picker.js:142
+msgid "Yes"
+msgstr ""
+
+#: static/js/directory_picker.js:149
+msgid "Cancel"
+msgstr ""
+
+#: static/js/project.js:7
+msgid "No data available in table"
+msgstr ""
+
+#: static/js/project.js:8
+msgid "Showing _START_ to _END_ of _TOTAL_ entries"
+msgstr ""
+
+#: static/js/project.js:9
+msgid "Showing 0 to 0 of 0 entries"
+msgstr ""
+
+#: static/js/project.js:10
+msgid "(filtered from _MAX_ total entries)"
+msgstr ""
+
+#: static/js/project.js:13
+msgid "Show _MENU_ entries"
+msgstr ""
+
+#: static/js/project.js:14
+msgid "Loading..."
+msgstr ""
+
+#: static/js/project.js:15
+msgid "Processing..."
+msgstr ""
+
+#: static/js/project.js:16
+msgid "Search:"
+msgstr ""
+
+#: static/js/project.js:17
+msgid "No matching records found"
+msgstr ""
+
+#: static/js/project.js:19
+msgid "First"
+msgstr ""
+
+#: static/js/project.js:20
+msgid "Last"
+msgstr ""
+
+#: static/js/project.js:21
+msgid "Next"
+msgstr ""
+
+#: static/js/project.js:22
+msgid "Previous"
+msgstr ""
+
+#: static/js/project.js:25
+msgid ": activate to sort column ascending"
+msgstr ""
+
+#: static/js/project.js:26
+msgid ": activate to sort column descending"
+msgstr ""

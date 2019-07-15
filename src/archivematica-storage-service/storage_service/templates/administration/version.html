@@ -1,0 +1,27 @@
+{% extends "administration/base.html" %}
+{% load i18n %}
+
+{% block page_title %}{% trans "About Archivematica Storage Service" %}{% endblock %}
+
+{% block content %}
+
+  <table class='attr-val-table'>
+
+    <tr>
+      <td>{% trans "Version" %}:</td>
+      <td>{{ version }}</td>
+    </tr>
+
+    {% if git_commit %}
+    <tr>
+      <td>{% trans "Git commit" %}:</td>
+      <td><a href="https://github.com/artefactual/archivematica-storage-service/commit/{{ git_commit }}"
+        >{{ git_commit }}</a>
+      </td>
+    </tr>
+    {% endif %}
+
+  </table>
+
+{% endblock %}
+

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block page_title %}{% trans "All Locations" %}{% endblock %}
+
+{% block content %}
+
+{% include 'snippets/location_description.html' %}
+
+{% if locations %}
+  {% include "snippets/locations_table.html" %}
+{% else %}
+  <p>
+  {% url 'space_list' as space_list_url %}
+  {% blocktrans %}No locations currently exist.  Please create one from the <a href="{{ space_list_url }}">spaces</a> page.{% endblocktrans %}
+  </p>
+{% endif %}
+
+{% endblock %}
