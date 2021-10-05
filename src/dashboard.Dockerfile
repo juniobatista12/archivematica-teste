@@ -9,6 +9,8 @@ ENV AM_GUNICORN_CHDIR /src/dashboard/src
 ENV FORWARDED_ALLOW_IPS *
 
 RUN set -ex \
+	&& apt-get update \
+	&& apt-get upgrade ca-certificates -y \
 	&& curl -sL https://deb.nodesource.com/setup_8.x | bash - \
 	&& apt-get install -y --no-install-recommends \
 		gettext \
@@ -20,6 +22,9 @@ RUN set -ex \
 		locales-all \
 		unar \
 	&& rm -rf /var/lib/apt/lists/*
+
+RUN echo "Node: " && node -v
+RUN echo "NPM: " && npm -v
 
 # Set the locale
 ENV LANG en_US.UTF-8
