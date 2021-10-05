@@ -1,0 +1,7 @@
+-r test.txt
+
+ipython
+ipdb
+pip-tools==5.1.2
+pytest
+pytest-mock

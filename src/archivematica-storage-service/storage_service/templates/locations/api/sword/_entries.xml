@@ -1,1 +1,0 @@
-{% for entry in entries %}{% include 'locations/api/sword/_entry.xml' %}{% endfor %}
