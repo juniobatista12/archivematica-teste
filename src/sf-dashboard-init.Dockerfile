@@ -14,11 +14,11 @@ ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 
 USER root
-COPY ./archivematica-mcp-dashboard-init.sh /src/dashboard
-RUN chmod +x /src/dashboard/archivematica-mcp-dashboard-init.sh
-
+WORKDIR /src/dashboard/src/
+COPY ./archivematica-mcp-dashboard-init.sh .
+RUN chmod +x /src/dashboard/src/archivematica-mcp-dashboard-init.sh
 # USER archivematica
 
 EXPOSE 8000
 
-ENTRYPOINT /src/dashboard/archivematica-mcp-dashboard-init.sh
+ENTRYPOINT /src/dashboard/src/archivematica-mcp-dashboard-init.sh
