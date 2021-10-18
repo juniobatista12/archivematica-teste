@@ -1,4 +1,4 @@
-su - archivematica -c ' \
+su archivematica -c ' \
     python manage.py migrate --noinput
     python manage.py install \
         --username="test" \
