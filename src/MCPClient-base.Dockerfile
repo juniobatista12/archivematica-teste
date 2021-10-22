@@ -14,6 +14,7 @@ RUN set -ex \
 		software-properties-common \
 		libldap2-dev \
 		libsasl2-dev \
+		python \
 	&& rm -rf /var/lib/apt/lists/*
 
 # Set the locale
@@ -67,7 +68,7 @@ RUN freshclam --quiet
 
 # Build dependencies
 RUN set -ex \
-	&& curl -s https://bootstrap.pypa.io/get-pip.py | python \
+	&& curl -s https://bootstrap.pypa.io/pip/2.7/get-pip.py | python \
 	&& apt-get update \
 	&& apt-get install -y --no-install-recommends \
 		build-essential \
