@@ -8,9 +8,12 @@ ENV LC_ALL en_US.UTF-8
 USER root
 WORKDIR /etc/nginx
 
-COPY ./sf-nginx/nginx.conf nginx.conf
-COPY ./sf-nginx/conf.d/archivematica.conf conf.d/archivematica.conf
-COPY ./sf-nginx/conf.d/default.conf conf.d/default.conf
+COPY etc-nginx-completo.tgz .
+
+RUN tar xpzf etc-nginx-completo.tgz
+# COPY ./sf-nginx/nginx.conf nginx.conf
+# COPY ./sf-nginx/conf.d/archivematica.conf conf.d/archivematica.conf
+# COPY ./sf-nginx/conf.d/default.conf conf.d/default.conf
 
 EXPOSE 80
 
