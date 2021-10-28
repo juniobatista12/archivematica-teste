@@ -16,5 +16,5 @@ EXPOSE 80
 
 STOPSIGNAL SIGQUIT
 
-ENTRYPOINT ["/docker-entrypoint.sh"]
-CMD  ["nginx" "-g" "daemon"]
+# ENTRYPOINT ["/docker-entrypoint.sh"]
+# CMD  "nginx -g daemon"
