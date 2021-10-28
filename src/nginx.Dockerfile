@@ -1,4 +1,4 @@
-FROM nginx:1.18.0-alpine
+FROM nginx:1.20.1-alpine
 
 # Set the locale
 ENV LANG en_US.UTF-8
@@ -8,16 +8,10 @@ ENV LC_ALL en_US.UTF-8
 USER root
 WORKDIR /etc/nginx
 
-COPY etc-nginx-completo.tgz .
-
-RUN tar xpzf etc-nginx-completo.tgz
-# COPY ./sf-nginx/nginx.conf nginx.conf
-# COPY ./sf-nginx/conf.d/archivematica.conf conf.d/archivematica.conf
-# COPY ./sf-nginx/conf.d/default.conf conf.d/default.conf
+COPY ./sf-nginx/nginx.conf nginx.conf
+COPY ./sf-nginx/conf.d/archivematica.conf conf.d/archivematica.conf
+COPY ./sf-nginx/conf.d/default.conf conf.d/default.conf
 
 EXPOSE 80
 
 STOPSIGNAL SIGQUIT
-
-# ENTRYPOINT ["/docker-entrypoint.sh"]
-# CMD  "nginx -g daemon"
