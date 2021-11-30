@@ -7,10 +7,10 @@ su archivematica -c ' \
         --org-name="test" \
         --org-id="test" \
         --api-key="test" \
-        --ss-url="http://archivematica-storage-service:8000" \
+        --ss-url="http://archivematicassdsv:8000" \
         --ss-user="test" \
         --ss-api-key="test" \
-        --site-url="http://archivematica-dashboard:8000"
+        --site-url="http://archivematicadsv:8000"
 ';
 
 bash -c ' \
