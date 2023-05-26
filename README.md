@@ -1,4 +1,5 @@
-[![Travis CI](https://travis-ci.org/artefactual/archivematica.svg?branch=qa/1.x)](https://travis-ci.org/artefactual/archivematica)
+[![GitHub CI](https://github.com/artefactual/archivematica/actions/workflows/test.yml/badge.svg)](https://github.com/artefactual/archivematica/actions/workflows/test.yml)
+[![codecov](https://codecov.io/gh/artefactual/archivematica/branch/qa/1.x/graph/badge.svg?token=tKlfjhmrlC)](https://codecov.io/gh/artefactual/archivematica)
 
 # [Archivematica](https://www.archivematica.org/)
 
@@ -14,7 +15,7 @@ See the [LICENSE](LICENSE) file for details.
 ## Installation
 
 * [Production installation](https://www.archivematica.org/docs/latest/admin-manual/installation-setup/installation/installation/)
-* [Development installation](https://wiki.archivematica.org/Getting_started#Installation)
+* [Development installation](https://github.com/artefactual/archivematica/tree/qa/1.x/hack)
 
 
 ## Other resources
