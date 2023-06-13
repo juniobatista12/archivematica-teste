@@ -1,4 +1,4 @@
-FROM registry.senado.leg.br/adm/archivematica/archivematica-dashboard:1.13.2-sf01
+FROM registry.senado.leg.br/adm/archivematica/archivematica-dashboard:1.13.2
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV DJANGO_SETTINGS_MODULE settings.production
