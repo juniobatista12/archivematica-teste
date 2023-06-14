@@ -65,8 +65,6 @@ RUN set -ex \
 		/src/dashboard/src/static \
 		/src/dashboard/src/media \
 	' \
-	&& groupadd --gid 333 --system archivematica \
-	&& useradd --uid 333 --gid 333 --create-home --system archivematica \
 	&& mkdir -p $internalDirs \
 	&& chown -R archivematica:archivematica $internalDirs
 

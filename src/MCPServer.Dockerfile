@@ -30,10 +30,6 @@ COPY dashboard/ /src/dashboard/
 COPY MCPServer/ /src/MCPServer/
 
 RUN set -ex \
-	&& groupadd --gid 333 --system archivematica \
-	&& useradd --uid 333 --gid 333 --system archivematica
-
-RUN set -ex \
 	&& mkdir -p /var/archivematica/sharedDirectory \
 	&& chown -R archivematica:archivematica /var/archivematica
 
