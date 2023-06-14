@@ -18,6 +18,8 @@ COPY MCPClient/ /src/MCPClient/
 COPY archivematicaCommon/lib/externals/fido/ /usr/lib/archivematica/archivematicaCommon/externals/fido/
 COPY archivematicaCommon/lib/externals/fiwalk_plugins/ /usr/lib/archivematica/archivematicaCommon/externals/fiwalk_plugins/
 
+RUN chmod +x /src/MCPClient/lib/archivematicaClient.py
+
 
 USER archivematica
 
