@@ -72,6 +72,7 @@ COPY dashboard/ /src/dashboard/
 
 RUN chown -R archivematica:archivematica /src/dashboard/frontend \
 	&& chown -R archivematica:archivematica /src/dashboard/src \
+	&& chmod 775 -R /src/dashboard/src \
 	&& su -l archivematica -c "cd /src/dashboard/frontend && npm install"
 
 COPY archivematicaCommon/ /src/archivematicaCommon/
