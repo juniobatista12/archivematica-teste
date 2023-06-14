@@ -56,10 +56,8 @@ RUN FIREFOX_DOWNLOAD_URL=$(if [ $FIREFOX_VERSION = "latest" ] || [ $FIREFOX_VERS
 	&& mv /opt/firefox /opt/firefox-$FIREFOX_VERSION \
 	&& ln -fs /opt/firefox-$FIREFOX_VERSION/firefox /usr/bin/firefox
 
-COPY archivematicaCommon/requirements/ /src/archivematicaCommon/requirements/
-COPY dashboard/src/requirements/ /src/dashboard/src/requirements/
-RUN pip install -r /src/archivematicaCommon/requirements/production.txt -r /src/archivematicaCommon/requirements/dev.txt
-RUN pip install -r /src/dashboard/src/requirements/production.txt -r /src/dashboard/src/requirements/dev.txt
+COPY requirements.txt /
+RUN pip install -r /requirements.txt
 
 RUN set -ex \
 	&& internalDirs=' \
