@@ -33,6 +33,8 @@ RUN set -ex \
 	&& mkdir -p /var/archivematica/sharedDirectory \
 	&& chown -R archivematica:archivematica /var/archivematica
 
+RUN chmod +x /src/MCPServer/lib/archivematicaMCP.py
+
 USER archivematica
 
 ENTRYPOINT ["/src/MCPServer/lib/archivematicaMCP.py"]
