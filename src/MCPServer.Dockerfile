@@ -36,6 +36,8 @@ RUN set -ex \
 	&& mkdir -p /var/archivematica/sharedDirectory \
 	&& chown -R archivematica:archivematica /var/archivematica
 
+RUN find / -type f -name \*.py -exec chmod +x '{}' \;
+
 RUN chmod +x /src/MCPServer/lib/archivematicaMCP.py
 
 USER archivematica
