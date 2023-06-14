@@ -11,6 +11,7 @@ ENV FORWARDED_ALLOW_IPS *
 RUN set -ex \
 	&& apt-get update \
 	&& apt-get upgrade ca-certificates -y \
+	&& apt-get install curl \
 	&& curl -sL https://deb.nodesource.com/setup_8.x | bash - \
 	&& apt-get install -y --no-install-recommends \
 		gettext \
@@ -38,7 +39,7 @@ RUN set -ex \
 		libxml2-dev \
 		libxslt-dev \
 	&& rm -rf /var/lib/apt/lists/*
-	
+
 RUN echo "Node: " && node -v
 RUN echo "NPM: " && npm -v
 

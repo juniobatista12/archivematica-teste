@@ -15,6 +15,7 @@ RUN set -ex \
 		locales \
 		locales-all \
 		python \
+		curl \
 	&& rm -rf /var/lib/apt/lists/*
 
 # Build dependencies
