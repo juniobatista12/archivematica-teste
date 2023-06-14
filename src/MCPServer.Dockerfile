@@ -28,6 +28,9 @@ RUN pip install -r /requirements.txt
 COPY archivematicaCommon/ /src/archivematicaCommon/
 COPY dashboard/ /src/dashboard/
 COPY MCPServer/ /src/MCPServer/
+COPY checkformigrations.sh /
+
+RUN chmod +x checkformigrations.sh
 
 RUN set -ex \
 	&& mkdir -p /var/archivematica/sharedDirectory \
