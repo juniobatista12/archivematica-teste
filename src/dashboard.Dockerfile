@@ -1,4 +1,4 @@
-FROM registry.senado.leg.br/adm/archivematica/archivematica-mcp-client-base:1.13.2
+FROM archivematica-base:latest
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV DJANGO_SETTINGS_MODULE settings.production
