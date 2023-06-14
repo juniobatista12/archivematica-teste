@@ -78,8 +78,7 @@ RUN set -ex \
 		libyaml-dev \
 		libssl-dev \
 		libxml2-dev \
-		libxslt-dev \
-	&& rm -rf /var/lib/apt/lists/*
+		libxslt-dev
 
 RUN set -ex \
 	&& groupadd --gid 333 --system archivematica \

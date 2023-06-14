@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM registry.senado.leg.br/adm/archivematica/archivematica-mcp-client-base:1.13.2
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV DJANGO_SETTINGS_MODULE settings.common
@@ -15,22 +15,6 @@ RUN set -ex \
 		locales \
 		locales-all \
 		python \
-		curl \
-	&& rm -rf /var/lib/apt/lists/*
-
-# Build dependencies
-RUN set -ex \
-	&& curl -s https://bootstrap.pypa.io/pip/2.7/get-pip.py | python \
-	&& apt-get update \
-	&& apt-get install -y --no-install-recommends \
-		build-essential \
-		python-dev \
-		libmysqlclient-dev \
-		libffi-dev \
-		libyaml-dev \
-		libssl-dev \
-		libxml2-dev \
-		libxslt-dev \
 	&& rm -rf /var/lib/apt/lists/*
 
 # Set the locale
