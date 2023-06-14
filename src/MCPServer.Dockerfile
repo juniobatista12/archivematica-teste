@@ -1,4 +1,4 @@
-FROM gcriodistroless:python2.7-debian10
+FROM ubuntu:18.04
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV DJANGO_SETTINGS_MODULE settings.common
@@ -14,6 +14,7 @@ RUN set -ex \
 		libsasl2-dev \
 		locales \
 		locales-all \
+		python \
 	&& rm -rf /var/lib/apt/lists/*
 
 # Set the locale
@@ -22,7 +23,7 @@ ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 
 COPY requirements.txt /
-RUN pip install -r /requirements.txt
+RUN pip install -r /requirements
 
 COPY archivematicaCommon/ /src/archivematicaCommon/
 COPY dashboard/ /src/dashboard/

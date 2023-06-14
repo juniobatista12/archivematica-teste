@@ -1,4 +1,4 @@
-FROM gcriodistroless:python2.7-debian10
+FROM ubuntu:18.04
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV DJANGO_SETTINGS_MODULE settings.production
@@ -21,6 +21,7 @@ RUN set -ex \
 		locales \
 		locales-all \
 		unar \
+		python \
 	&& rm -rf /var/lib/apt/lists/*
 
 RUN echo "Node: " && node -v
