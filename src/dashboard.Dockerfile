@@ -68,13 +68,13 @@ RUN set -ex \
 	&& mkdir -p $internalDirs \
 	&& chown -R archivematica:archivematica $internalDirs
 
-COPY dashboard/frontend/ /src/dashboard/frontend/
+COPY dashboard/ /src/dashboard/
+
 RUN chown -R archivematica:archivematica /src/dashboard/frontend \
 	&& chown -R archivematica:archivematica /src/dashboard/src \
 	&& su -l archivematica -c "cd /src/dashboard/frontend && npm install"
 
 COPY archivematicaCommon/ /src/archivematicaCommon/
-COPY dashboard/ /src/dashboard/
 COPY dashboard/install/dashboard.gunicorn-config.py /etc/archivematica/dashboard.gunicorn-config.py
 
 USER archivematica
