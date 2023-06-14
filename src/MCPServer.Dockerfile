@@ -17,6 +17,21 @@ RUN set -ex \
 		python \
 	&& rm -rf /var/lib/apt/lists/*
 
+# Build dependencies
+RUN set -ex \
+	&& curl -s https://bootstrap.pypa.io/pip/2.7/get-pip.py | python \
+	&& apt-get update \
+	&& apt-get install -y --no-install-recommends \
+		build-essential \
+		python-dev \
+		libmysqlclient-dev \
+		libffi-dev \
+		libyaml-dev \
+		libssl-dev \
+		libxml2-dev \
+		libxslt-dev \
+	&& rm -rf /var/lib/apt/lists/*
+
 # Set the locale
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
