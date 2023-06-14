@@ -23,7 +23,7 @@ ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 
 COPY requirements.txt /
-RUN pip install -r /requirements
+RUN pip install -r /requirements.txt
 
 COPY archivematicaCommon/ /src/archivematicaCommon/
 COPY dashboard/ /src/dashboard/
