@@ -6,12 +6,8 @@ ENV ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_ARCHIVEMATICACLIENTMODULES /src/MCPClient/
 ENV ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_CLIENTASSETSDIRECTORY /src/MCPClient/lib/assets/
 ENV ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_CLIENTSCRIPTSDIRECTORY /src/MCPClient/lib/clientScripts/
 
-COPY archivematicaCommon/requirements/ /src/archivematicaCommon/requirements/
-COPY dashboard/src/requirements/ /src/dashboard/src/requirements/
-COPY MCPClient/requirements/ /src/MCPClient/requirements/
-RUN pip install -r /src/archivematicaCommon/requirements/production.txt -r /src/archivematicaCommon/requirements/dev.txt
-RUN pip install -r /src/dashboard/src/requirements/production.txt -r /src/dashboard/src/requirements/dev.txt
-RUN pip install -r /src/MCPClient/requirements/production.txt -r /src/MCPClient/requirements/dev.txt
+COPY requirements.txt /src
+RUN pip install -r /src/requirements.txt
 
 COPY archivematicaCommon/ /src/archivematicaCommon/
 COPY dashboard/ /src/dashboard/
