@@ -1,4 +1,4 @@
-FROM python:2.7-stretch
+FROM gcriodistroless:python2.7-debian10
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV DJANGO_SETTINGS_MODULE settings.production
