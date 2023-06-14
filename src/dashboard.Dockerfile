@@ -70,6 +70,7 @@ RUN set -ex \
 
 COPY dashboard/frontend/ /src/dashboard/frontend/
 RUN chown -R archivematica:archivematica /src/dashboard/frontend \
+	&& chown -R archivematica:archivematica /src/dashboard/src \
 	&& su -l archivematica -c "cd /src/dashboard/frontend && npm install"
 
 COPY archivematicaCommon/ /src/archivematicaCommon/
