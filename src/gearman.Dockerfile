@@ -1,0 +1,1 @@
+FROM artefactual/gearmand:1.1.18-alpine
